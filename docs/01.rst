@@ -1,0 +1,71 @@
+==========
+Sphinxとは
+==========
+
+Spihnxは、reStructuredText記法で書かれたテキストファイルをHTML、
+PDFやepubなどの様々な形式へ変換するためのツールです。
+
+Pythonの公式ドキュメントはSphinxを使って書かれています。
+また、Python以外の多くのプロジェクトでもSphinxが利用されています。
+
+
+Sphinxのよくある利用例
+======================
+* 議事録
+
+  * `議事録サンプル <../../../samples/01/record_20120107.rst>`_
+  * `議事録サンプル html <../../../samples/01/_build/html/index.html>`_
+  * `議事録サンプル epub <../../../samples/01/_build/epub/sample_01.epub>`_
+  * `議事録サンプル pdf <../../../samples/01/_build/pdf/sample.pdf>`_
+  * `議事録サンプル latexpdfja <../../../samples/01/_build/latex/sample_01.pdf>`_
+
+* 開発系ドキュメント
+
+  * `Python documentation <http://docs.python.jp/3.3/index.html>`_
+
+* ウェブサイト/ブログ
+
+  * `Sphinx-Users.jp <http://sphinx-users.jp/>`_
+
+* 情報共有、技術メモ
+
+  * `OpenStack essex-4 インストール手順 — Installing OpenStack essex-4 1 documentation <http://lowlevellife.com/docs/essex-4/>`_
+
+
+Sphinxの処理の流れ
+==================
+Sphinxでは、サンプルで見たreStructuredTextのファイルを、
+読み込み変換することでhtmlやPDFなどを出力します。
+
+
+.. blockdiag::
+
+    blockdiag sphinx {
+        1 [label = "テキストエディット"];
+        2 [label = "reStructuredTextの文書", stacked];
+        3 [label = "変換"];
+
+        group { 
+            orientation = portrait;
+            color = "#77FF77";
+            1 -> 2;
+        }
+
+        2 -> 3 [label="読込"];
+
+        group { 
+            color = "#FF7777";
+            3;
+        }
+
+        3 -> html, pdf, epub [label="生成"]
+
+        group { 
+            html, pdf, epub ;
+            color = "#7777FF";
+        }
+    }
+
+
+ちなみにこの図はpythonのblockdiagをsphinxから使用して出力しています。
+

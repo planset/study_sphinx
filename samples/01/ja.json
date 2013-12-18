@@ -1,0 +1,33 @@
+{
+    "embeddedFonts" :
+    [[
+        "ipam.ttf",
+        "ipag.ttf",
+        "ipagp.ttf",
+        "ipamp.ttf"
+    ]],
+    "fontsAlias" : {
+        "stdFont": "IPAPMincho",
+        "stdBold": "IPAPMincho",
+        "stdItalic": "IPAPMincho",
+        "stdBoldItalic": "IPAPMincho",
+        "stdSans": "IPAPGothic",
+        "stdSansBold": "IPAPGothic",
+        "stdSansItalic": "IPAPGothic",
+        "stdSansBoldItalic": "IPAPGothic",
+        "stdMono": "IPAPGothic",
+        "stdMonoItalic": "IPAPGothic",
+        "stdMonoBold": "IPAPGothic",
+        "stdMonoBoldItalic": "IPAPGothic",
+        "stdSerif": "IPAPMincho"
+    },
+    "styles" : [
+        ["base" , {
+            "wordWrap": "CJK",
+            "kerning" : true
+        }],
+        ["literal" , {
+            "wordWrap": "None"
+        }]
+     ]
+ }

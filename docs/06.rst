@@ -1,0 +1,124 @@
+========================
+色々なテーマ、sphinx拡張
+========================
+
+テーマ
+======
+
+デフォルトのテーマ
+-------------------
+sphinxで生成するHTMLには *テーマ* という仕組みがあり、
+テーマを切り替えることで見た目を大きく変えることができます。
+
+テーマを変えるには、conf.pyの::
+
+    html_theme = 'default'
+
+を変更します。
+
+デフォルトで使えるテーマに関しては、 `HTMLテーマのサポート — Sphinx v1.0.6 documentation <http://sphinx-users.jp/doc10/theming.html>`_ を確認して下さい。
+
+
+readthedocsのテーマ
+-------------------
+サービスを展開しているだけあって読みやすいテーマです。レスポンシブ。おすすめ。
+
+* `snide/sphinx_rtd_theme <https://github.com/snide/sphinx_rtd_theme>`_
+* `Read the Docs Theme <http://docs.readthedocs.org/en/latest/theme.html>`_
+
+.. code-block:: bash
+
+    pip install sphinx_rtd_theme
+
+
+conf.pyに以下を追加
+
+.. code-block:: python
+
+    import sphinx_rtd_theme
+    html_theme = 'sphinx_rtd_theme'
+    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+
+
+flaskのテーマ
+-------------------
+非常にシンプルですが可読性は高いです。
+
+* `mitsuhiko/flask-sphinx-themes <https://github.com/mitsuhiko/flask-sphinx-themes>`_
+* `Welcome | Flask (A Python Microframework) <http://flask.pocoo.org/>`_
+
+
+sphinx拡張
+============
+
+* `Sphinxの開発 — Sphinx 1.2b3 ドキュメント <http://docs.sphinx-users.jp/develop.html>`_
+
+
+blockdiagシリーズ
+------------------
+極めればエクセルで書いていた内容を置き換えることも夢じゃない！？そんなツール
+
+* ブロック図生成ツール blockdiag
+* シーケンス図生成ツール seqdiag
+* アクティビティ図生成ツール actdiag
+* ネットワーク図生成ツール nwdiag
+
+`ブロック図生成ツール blockdiag — blockdiag 1.0 documentation <http://blockdiag.com/ja/#>`_
+
+
+各種ツール自体は独立したものですが、
+sphinx拡張も用意されていてsphinxから使うことができます。
+
+.. note:: ツール自体は独立しているので、
+    redmineから画像生成だけさせたりすることもできます。実際プラグインもある）
+
+
+s6でプレゼン
+------------
+sphinx,reStructuredTextでスレイドも作れたら便利じゃないか、ということで
+javascriptで書かれたプレゼンテーション表示用ライブラリのs6を使ったsphinx拡張です。
+
+`Sphinx S6 サンプル <http://pythonhosted.org/sphinxjp.themes.s6/#id12>`_
+
+.. code-block:: bash
+
+    pip install sphinxjp.themes.s6
+
+conf.pyの設定
+
+.. code-block:: python
+
+    extensions = ['sphinxjp.themecore']
+    html_theme = 's6'
+
+
+以下のように書いて make html するとスライドになります。
+
+.. literalinclude:: ../samples/05/s6/index.rst
+
+
+`スライド <../../../samples/05/s6/_build/html/index.html>`_ 
+
+
+RESTful HTTP APIドキュメントを作る
+-----------------------------------
+簡単にAPI仕様書が作れます。
+
+また、Flaskやtornadoのルーティングを解析して仕様書にしてくれます。
+Flaskなどを使う場合には非常に便利です。
+
+`sphinxcontrib.httpdomain — Documenting RESTful HTTP APIs — sphinxcontrib-httpdomain 1.2.0 documentation <http://pythonhosted.org/sphinxcontrib-httpdomain/>`_
+
+
+.. code-block:: bash
+
+    pip install sphinxcontrib-httpdomain
+
+
+conf.pyに追加
+
+.. code-block:: python
+
+    extensions += ['sphinxcontrib.httpdomain']
+
+

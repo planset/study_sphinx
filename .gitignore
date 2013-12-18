@@ -1,0 +1,7 @@
+env/
+*.pyc
+docs/_build
+
+*.ttf
+_build
+samples/01/exts/sphinx-docxbuilder/

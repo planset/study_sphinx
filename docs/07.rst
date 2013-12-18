@@ -1,0 +1,14 @@
+==============
+自分で拡張する
+==============
+
+
+
+
+
+
+`チュートリアル: シンプルな拡張を作成 — Sphinx 1.1 (hg) documentation <http://sphinx-users.jp/doc11/ext/tutorial.html>`_
+`sphinx拡張開発メモ ( #sphinxjp アドベントカレンダー 13.1日目) - 科学と非科学の迷宮 <http://d.hatena.ne.jp/shiumachi/20121219/1355905961>`_
+
+`定義を書くために独自ディレクティブを追加したい — Python製ドキュメンテーションビルダー、Sphinxの日本ユーザ会 <http://sphinx-users.jp/reverse-dict/writing/vocabulary.html>`_
+

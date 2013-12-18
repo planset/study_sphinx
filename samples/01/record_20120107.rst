@@ -1,0 +1,70 @@
+﻿========================
+OpenStack勉強会 2012/1/7
+========================
+
+実施概要
+========
+
+:日付: ２０１２年１月７日（土）
+:時刻: １０：１５～１６：４５
+:参加者: 
+    * 株式会社エキスパンド　横山様
+    * 冨貴堂ユーザック　五十嵐
+
+内容
+====
+
+OpenStackを構築するための準備
+-----------------------------
+* まず最初の目標として `OpenStack Starter Guide`_ と同じ構成で
+  動作させることにする。
+* Starter Guideとの *相違点*
+
+  * DNS＆NTPサーバーが **10.10.10.5**
+
+.. _`OpenStack Starter Guide`: http://docs.openstack.org/havana/install-guide/install/apt/content/
+
+
+作業内容
+--------
+* 横山
+
+  * ネットワーク環境
+  * VPNなど作業用の設定
+  * ストレージ周りの設定
+
+* 五十嵐
+
+  * サーバー１台準備（`Ubuntu 11.10 <http://ubuntu.com>`_）
+  * DNS＆NTPサーバーの設定
+  * StarterGuideのServer2について現状可能な設定
+
+
+次回への課題
+------------
+* VPNがうまく繋がらない。
+* 次回から高専生が参加するので作業してもらう内容を考えておく。
+
+.. なにしようかなぁ・・・
+
+
+次回予定
+========
+* 次回は１月２１日（土）
+* StargetGuideの続きを行う。
+
+
+作業ログ
+========
+
+openstackdns
+------------
+.. literalinclude:: /logs/20120107_openstackdns_install.txt
+
+ovsv07
+------------
+.. literalinclude:: /logs/20120107_ovsv07.txt
+
+
+
+
