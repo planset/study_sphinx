@@ -67,5 +67,4 @@ Sphinxでは、サンプルで見たreStructuredTextのファイルを、
     }
 
 
-ちなみにこの図はpythonのblockdiagをsphinxから使用して出力しています。
 
