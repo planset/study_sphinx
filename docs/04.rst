@@ -128,6 +128,7 @@ Sphinxでの文章の書き方(reStructuredText)
 
 + 項目1
 + 項目2
+
 - 項目1
 - 項目2
 
