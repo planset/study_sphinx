@@ -7,3 +7,8 @@ README
 * docsの部分はreadthedocsを使ってます。
   -> `readthedocs <http://planset-study-sphinx.readthedocs.org/ja/latest/>`_ 
 
+readthedocsでblockdiag
+-----------------------
+* requirements.txtを用意
+* Use virtualenvにチェックを付ける
+
