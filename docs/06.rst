@@ -21,7 +21,7 @@ sphinxで生成するHTMLには *テーマ* という仕組みがあり、
 
 readthedocsのテーマ
 -------------------
-サービスを展開しているだけあって読みやすいテーマです。レスポンシブ。おすすめ。
+サービスを展開しているだけあって読みやすいテーマです。レスポンシブ。
 
 * `snide/sphinx_rtd_theme <https://github.com/snide/sphinx_rtd_theme>`_
 * `Read the Docs Theme <http://docs.readthedocs.org/en/latest/theme.html>`_
@@ -46,6 +46,17 @@ flaskのテーマ
 
 * `mitsuhiko/flask-sphinx-themes <https://github.com/mitsuhiko/flask-sphinx-themes>`_
 * `Welcome | Flask (A Python Microframework) <http://flask.pocoo.org/>`_
+
+
+その他のテーマ
+--------------
+.. code-block::
+
+    pip search sphinxjp
+
+* `Loose Bits - Sphinx Bootstrap Theme 0.3.0 - Bootstrap v3 and more! <http://loose-bits.com/2013/09/08/sphinx-bootstrap-theme-bootstrap-3.html>`_
+* `birkenfeld / sphinx-contrib — Bitbucket <https://bitbucket.org/birkenfeld/sphinx-contrib>`_
+* `Sphinx拡張 探訪 / Explor Extensions — SphinxCon 2012 documentation <http://tdoc.info/sphinxcon2012/>`_
 
 
 sphinx拡張
@@ -78,7 +89,7 @@ s6でプレゼン
 sphinx,reStructuredTextでスレイドも作れたら便利じゃないか、ということで
 javascriptで書かれたプレゼンテーション表示用ライブラリのs6を使ったsphinx拡張です。
 
-`Sphinx S6 サンプル <http://pythonhosted.org/sphinxjp.themes.s6/#id12>`_
+`Sphinx S6 サンプル <http://pythonhosted.org/sphinxjp.themes.s6/>`_
 
 .. code-block:: bash
 
@@ -95,9 +106,6 @@ conf.pyの設定
 以下のように書いて make html するとスライドになります。
 
 .. literalinclude:: ../samples/05/s6/index.rst
-
-
-`スライド <../../../samples/05/s6/_build/html/index.html>`_ 
 
 
 RESTful HTTP APIドキュメントを作る
@@ -120,5 +128,21 @@ conf.pyに追加
 .. code-block:: python
 
     extensions += ['sphinxcontrib.httpdomain']
+
+
+その他のSphinx拡張
+--------------------
+.. code-block:: bash
+
+    pip search sphinxcontrib
+    pip search sphinxjp
+
+
+* `Sphinx拡張 — Sphinx v1.0.6 documentation <http://sphinx-users.jp/doc10/extensions.html>`_
+* `birkenfeld / sphinx-contrib — Bitbucket <https://bitbucket.org/birkenfeld/sphinx-contrib>`_
+* `Sphinx拡張 探訪 / Explor Extensions — SphinxCon 2012 documentation <http://tdoc.info/sphinxcon2012/>`_
+* `(6日目) Sphinx 拡張の紹介 - Hack like a rolling stone <http://tk0miya.hatenablog.com/entry/20111206/p1>`_
+
+
 
 

@@ -16,7 +16,7 @@ Sphinxのよくある利用例
   * `議事録サンプル <../../../samples/01/record_20120107.rst>`_
   * `議事録サンプル html <../../../samples/01/_build/html/index.html>`_
   * `議事録サンプル epub <../../../samples/01/_build/epub/sample_01.epub>`_
-  * `議事録サンプル pdf <../../../samples/01/_build/pdf/sample.pdf>`_
+  * `議事録サンプル pdf <../../../samples/01/_build/pdf/filename.pdf>`_
   * `議事録サンプル latexpdfja <../../../samples/01/_build/latex/sample_01.pdf>`_
 
 * 開発系ドキュメント

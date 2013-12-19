@@ -12,3 +12,6 @@
 
 `定義を書くために独自ディレクティブを追加したい — Python製ドキュメンテーションビルダー、Sphinxの日本ユーザ会 <http://sphinx-users.jp/reverse-dict/writing/vocabulary.html>`_
 
+
+
+

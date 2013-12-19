@@ -1,6 +1,6 @@
-=====================
-色々な変換(PDF, epub)
-=====================
+==========
+色々な変換
+==========
 
 epub
 ====
@@ -36,7 +36,7 @@ LaTexからpdfを作成する方法です。
 
 しかし、私はLaTexを触ったことがないのでよくわかりません！
 
-まずTexLive(win)かMacTex(Mac)をインストールします。
+latex経由でPDFを作成するには、まずTexLive(win)かMacTex(Mac)をインストールします。
 
 :win: `TeX Live - TeX Users Group <http://www.tug.org/texlive/>`_
 :mac: `MacTEX <http://www.tug.org/mactex/>`_
@@ -220,6 +220,7 @@ MakefileにPDFのmake内容を追加します。
 
 docx
 ====
+sphinx拡張を用意しなくてはいけませんが、Wordファイル（docx）に変換できます。
 
 .. code-block:: bash
 

@@ -2,7 +2,7 @@
 Sphinxでの文章の書き方(reStructuredText)
 ========================================
 
-自分がよく使う書き方を集めてみました。
+ここでは、自分がよく使う書き方を集めてみました。
 
 
 .. _TOP:
@@ -395,6 +395,56 @@ list-table
    * - Gannet Ripple
      - 1.99
      - On a stick!
+
+     
+注釈
+====
+
+ノート
+
+.. note::
+    
+    これは注釈です！
+
+.. code-block:: rst
+
+    .. note::
+
+        これは注釈です！
+
+警告
+
+.. warning::
+    
+    これは警告です！
+
+.. code-block:: rst
+
+    .. warning::
+
+        これは警告です！
+
+
+索引
+====
+indexディレクティブを設定することで、索引を作ることができます。
+
+.. index:: Python
+
+
+.. index::
+    pair: Python; Sphinx
+
+
+.. code-block:: rst
+    
+    .. index:: Python
+    
+    .. index::
+        pair: Python; Sphinx
+    
+
+* :ref:`genindex`
 
 
 他のファイルのインクルード

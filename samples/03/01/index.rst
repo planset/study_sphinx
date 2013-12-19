@@ -11,19 +11,21 @@ Sphinx勉強会
 
 勉強会の内容
 ============
-勉強会の資料から引用します。
+Sphinxの勉強会に参加してきました。
+
+Sphinxとは次のようなツールです。
 
     Spihnxは、reStructuredText記法で書かれたテキストファイルをHTML、PDFやepubなどに変換するためのツールです。
 
     Pythonの公式ドキュメントはSphinxを使って書かれています。
     また、Python以外の多くのプロジェクトでもSphinxが利用されています。
 
-というわけでSphinxってすごそうです。
+勉強会では、勉強会のレポートを書きながらSphinxについて学びました。
 
 sphinxを利用するために必要なこと
 
 * テキストエディタ
-* *python環境*
+* *Sphinxの環境*
 
   * python
   * (pip)

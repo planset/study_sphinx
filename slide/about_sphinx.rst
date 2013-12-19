@@ -2,10 +2,9 @@
 .. slide:: Sphinxとは
 
     * python製のドキュメントツール
-    * reStructuredText
  
 
-.. slide:: Sphinxの仕組み
+.. slide:: ドキュメントツール？
 
     1. テキストで文章を書く
     2. Sphinxで変換する
@@ -15,7 +14,7 @@
 .. slide:: Sphinxの特徴1
  
     * 多くのフォーマットに変換
-      html, epub, latex, pdf, docx
+      html, epub, latex, pdf, man
  
 
 .. slide:: Sphinxの特徴2
@@ -31,57 +30,58 @@
 
 .. slide:: Sphinxの特徴3
 
-    * テキスト形式
-
-      * エディタを選ばない
-      * バージョン管理できる。複数人で編集できる。
-      * そのままでも読める
-
-
-.. slide:: Sphinxの特徴4
-
     * 機能を拡張することができる
 
       * テーマ
       * Sphinx拡張
 
 
-.. slide:: Sphinxが得意なこと1
+.. slide:: では、
 
-    * 開発系ドキュメント
-
-      * 関数やクラスの説明を簡単に書ける
-      * readthedocsによりgithubと連携してドキュメント生成
+    Sphinxはどんなところに使えるの？
 
 
-.. slide:: Sphinxが得意なこと2
+.. slide:: 開発系ドキュメント
 
-    * 議事録、情報共有、ブログ
-
-      * 記法がシンプルなので書きやすい。
-      * そのままテキストで配布しても困らない。
-      * 強調やコードハイライトが使える。
+    * もともとPythonの公式ドキュメントを作成するためのもの
+    * 関数やクラスの説明を簡単に書ける
+    * readthedocsによりgithubと連携してドキュメント生成もできる
 
 
-.. slide:: Sphinxが得意なこと3
+.. slide:: ウェブサイト
 
-    * 書籍
+    * HTML出力ができるので、動的な内容が必要でなければ割と十分使える。
+    * sphinxの公式サイトもsphinxで出力されている。`link <http:://sphinx-doc.org>`_
 
-      * 書籍を書くのに使ってる人もいる
+.. slide:: その他色々
+
+    * 議事録、技術メモ
+    * そのままテキストで配布しても読める。
 
 
-.. slide:: Sphinxが不得意なこと1
+.. slide:: 書籍
+
+    * エキスパートPythonプログラミング
+    * Pythonプロフェッショナルプログラミング
+
+    Sphinxからの出力を更に変換して
+    ReVIEWフォーマットで出版だそうです。
+
+
+.. slide:: Sphinxが不得意なこと
 
     * 図、表は別途作成する必要がある。
-    * レイアウトに凝ることはできない。
+    * レイアウトをほとんど指定できない。
     * 変換しないと成果物を見ることができない。
-    * ビルドする環境が必要
+    * (ビルドする環境が必要)
+    * markdownじゃない
 
 
 .. slide:: どのくらい使われているの？
 
     * `Sphinxを使用しているプロジェクト — Sphinx 1.1 (hg) documentation <http://sphinx-users.jp/doc11/examples.html>`_
     * `Sphinxを使用しているサイト — Python製ドキュメンテーションビルダー、Sphinxの日本ユーザ会 <http://sphinx-users.jp/example.html>`_
+
 
 .. slide:: 実際に見てみましょう
 

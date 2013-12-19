@@ -4,11 +4,14 @@
 
 では、実際にドキュメントを書いてみましょう。
 
-今回の勉強会メモを作っていきます。
+今回の勉強会のレポートを作っていきます。
+
+文章はみなさんで好きなように書いていただいて問題ありません。
 
 
+書く項目を決めます
+==================
 こんなことを書きましょうか
-==========================
 
 * 勉強会のタイトル
 * 開催情報
@@ -16,19 +19,23 @@
 * 資料
 
 
-sphinx-quickstart
-==================
+Sphinxプロジェクトを作りましょう
+=================================
 まずは、好きなディレクトリに移動して、sphinx-quickstartを実行します。
+
+以下では report というドキュメント名を指定して実行しています。
+
 
 .. code-block:: bash
 
-    [env] $ sphinx-quickstart 03
+    sphinx-quickstart report
+
     Welcome to the Sphinx 1.2 quickstart utility.
 
     Please enter values for the following settings (just press Enter to
     accept a default value, if one is given in brackets).
 
-    Selected root path: 03
+    Selected root path: report
 
     You have two options for placing the build directory for Sphinx output.
     Either, you use a directory "_build" within the root path, or you separate
@@ -83,14 +90,14 @@ sphinx-quickstart
     )
     > Create Windows command file? (Y/n) [y]:
 
-    Creating file 03/conf.py.
-    Creating file 03/index.rst.
-    Creating file 03/Makefile.
-    Creating file 03/make.bat.
+    Creating file report/conf.py.
+    Creating file report/index.rst.
+    Creating file report/Makefile.
+    Creating file report/make.bat.
 
     Finished: An initial directory structure has been created.
 
-    You should now populate your master file 03/index.rst and create other documentation
+    You should now populate your master file report/index.rst and create other documentation
     source files. Use the Makefile to build the docs, like so:
     make builder
     where "builder" is one of the supported builders, e.g. html, latex or linkcheck.
@@ -110,17 +117,20 @@ sphinx-quickstart
     ============
 
 
-文字の上下に文字列と同じ長さの記号を書くと、*セクション* になります。
+上のように **文字の上下に同じ長さの記号** を書くと、*セクション* になります。
+
+文字列よりも短いとだめです。長い分には問題無いです。
 
 文字の下に文字列と同じ長さの記号を書いても同じです。
 
 １つのファイルの中で一番最初にでてくるセクションがページのタイトルになります。
 
-index.rstを編集したら保存して、make htmlでビルドしてみましょう。
+index.rstを編集したら保存して、make htmlでビルドして確認してみましょう。
 
 .. code-block:: bash
 
-    $ make html
+    make html
+
     sphinx-build -b html -d _build/doctrees   . _build/html
     Making output directory...
     Running Sphinx v1.2
@@ -190,7 +200,7 @@ index.rstを編集したら保存して、make htmlでビルドしてみまし�
 ============
 次に、開催情報に参加者と日時を箇条書きを使って追加しましょう。
 
-::
+.. code-block:: rst
 
     開催情報
     ========
@@ -199,69 +209,80 @@ index.rstを編集したら保存して、make htmlでビルドしてみまし�
     * 参加者： planset, ...
 
 
-* + -とスペースを１つ入れてから文章を書くとリストになります。
+\* \+ -とスペースを１つ入れてから文章を書くとリストになります。
 
 ビルドすると、<ul><li>に変換されます。
 
-番号付きリストも使うことができ、::
+番号付きリストも使うことができます。
+
+.. code-block:: rst
 
     1. 項目1
     2. 項目2
     3. 項目3
 
-というように書いてビルドすると<ol><li>に変換されます。
+
+上のように書くと、<ol><li>に変換されます。
 
 番号付きリストは1.,2.,3.以外にも、(1),(2),(3)...や1),2),3)やA.,B.,C.でも書けます。
 
-また、#.を使うことで自動で番号をふることもできます。
+また、\#.を使うことで自動で番号をふることもできます。
 
 
 
 勉強会の内容　段落、引用文
 ==========================
-長い文章を書いている場合、段落として区切りたい場合がでてきます。
+長い文章を書いている場合、段落として区切りたいときがくるはずです。ええきっと。
+
 その場合には、空行を１つ入れて下さい。それだけで段落となります。
 
-::
+.. code-block:: rst
 
     勉強会の内容
     ============
-    Spihnxは、reStructuredText記法で書かれたテキストファイルをHTML、PDFやepubなどに変換するためのツールです。
+    Sphinxの勉強会に参加してきました。
 
-    Pythonの公式ドキュメントはSphinxを使って書かれています。
-    また、Python以外の多くのプロジェクトでもSphinxが利用されています。
+    勉強会では、勉強会のレポートを書きながらSphinxについて学びました。
+
+    それはそうと講師の方がいけめｎうぇぎぃふろじｔｐｈこｌｙ；「
 
 
+きっとレポートを書いていると、何かの資料を引用したくなります。
 
-次に、引用を書きます。
+その場合には、行頭にひとつ以上のスペースを入れて文章を書くことで
+引用文として<blockquote>に変換されます。
 
-行頭にひとつ以上のスペースを入れて文章を書くことで引用文として<blockquote>に変換されます。
+.. code-block:: rst
 
-::
+    勉強会の内容
+    ============
+    Sphinxの勉強会に参加してきました。
 
-    資料から引用します。
+    Sphinxとは次のようなツールです。
 
         Spihnxは、reStructuredText記法で書かれたテキストファイルをHTML、PDFやepubなどに変換するためのツールです。
 
         Pythonの公式ドキュメントはSphinxを使って書かれています。
         また、Python以外の多くのプロジェクトでもSphinxが利用されています。
 
-    というわけでSphinxってすごそうです。
+    勉強会では、勉強会のレポートを書きながらSphinxについて学びました。
+    
 
-
-行頭にいれたスペースが同じ数であれば、同じ引用の業として解釈されます。
+行頭にいれたスペースが同じ数であれば、同じ引用の行として解釈されます。
 
 
 リスト、サブリスト
 ===================
 先ほど箇条書きを書きましたが、サブリストもよく書きたくなります。
 
-勉強会の内容に以下を追加しましょう::
+勉強会の内容に以下を追加しましょう。
+
+.. code-block:: rst
 
     sphinxを利用するために必要なこと
 
     * テキストエディタ 
-    * python環境
+    * Sphinxの環境
 
       * python
       * (pip)
@@ -271,7 +292,7 @@ index.rstを編集したら保存して、make htmlでビルドしてみまし�
     * コマンドラインツールへの多少の慣れ
     
 
-サブリストを書くときは、１行開けます。
+サブリストを書くときは、１行開けて書きます。
 
 次に、トップレベルのリストの文章を書いているところを先頭として、
 行頭にスペースを入れてリストを書いていきます。
@@ -279,23 +300,25 @@ index.rstを編集したら保存して、make htmlでビルドしてみまし�
 
 強調
 ====
-文章を書くとき、強調したい文章があると思います。
+ここが重要だ！ という文章は強調したいと思います。
 
-強調を行うには、以下のようにします。
+強調を行うには、以下のように書いていきます。
 
 ======== =========== ============ =========
-         使用例      書き方       HTMLタグ
+種類     使用例      書き方       HTMLタグ
 ======== =========== ============ =========
 強調     *文字列*    \*で囲む     <em>
 強い強調 **文字列**  \*\*で囲む   <strong>
 ======== =========== ============ =========
 
-先ほどのリストを強調してみます。::
+先ほどのリストを強調してみます。
+
+.. code-block:: rst
 
     sphinxを利用するために必要なこと
 
     * テキスト*エディタ*
-    * *python* 環境
+    * *Sphinx* の環境
 
       * *python*
       * (pip)
@@ -312,7 +335,9 @@ index.rstを編集したら保存して、make htmlでビルドしてみまし�
 ============
 文章を書いていると、外部へのリンクを作りたい場合があります。
 
-次のようにリンクを書くことができます。::
+次のように記述するとリンクを書くことができます。
+
+.. code-block:: rst
 
     資料
     ====
@@ -331,21 +356,22 @@ index.rstを編集したら保存して、make htmlでビルドしてみまし�
 
 .. _`スペースを 含む文字列`: http://localhost/
 
-どの方法が良いというわけはありません。
-
-3の方法は同じ文言を同じリンクにしたい場合には
-有効ですが、文字列と実際のリンクURLが離れてしまう欠点もあります。
-
-逆に、2の方法で、同じ文字列に対して2回書いてしまうと、ビルド時に警告がでます。
 
 
-コメント
-========
-行頭に .. をつけるとコメントになります。
+ひとくぎり
+============
+まずはここまでの内容を使って、ドキュメントを作成してみてください。
 
-::
+作成が終わったら、make htmlです！
 
-    .. あーつかれた
+
+|
+|
+|
+|
+|
+|
+|
 
 
 
@@ -367,19 +393,22 @@ index.rstを編集したら保存して、make htmlでビルドしてみまし�
          |- ・
 
 
-この場合どうやってsphinxでビルドするか見て行きましょう。
+この場合どうやってsphinxでビルドするか実際に操作してみましょう。
+
 
 ファイルをリネームする。
 ========================
 まず、今までのindex.rstをリネームして、20131221_study_sphinx.rstにします。
-長い場合には、もっと短くてもよいです。
+もっと短い名前でもよいです。
 
 ついでにそのファイルをコピーして、20131222_study_sphinx2.rstも作りましょう。
 
 
 ディレクトリを作成する。
 ========================
-reportディレクトリを作りって先ほどの２つのファイルを入れます。::
+reportディレクトリを作りって先ほどの２つのファイルを入れます。
+
+.. code-block:: bash
 
     mkdir report
     mv 2013* report/
@@ -410,5 +439,23 @@ index.rstを作成
     * :ref:`genindex`
     * :ref:`modindex`
     * :ref:`search`
+
+
+できたらビルドです
+==================
+.. code-block:: bash
+
+    make html
+    open _build/html/index.html
+
+
+文章の階層構造がtoctreeディレクティブにより解析されて、
+きれいな目次ができます。
+
+これで、ファイルが増えても大丈夫です。
+
+また、大きな文書を書く場合でも章ごとにファイルを分けておいて、
+変換時に１つの文書にすることもできます。
+
 
 

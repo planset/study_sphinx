@@ -5,28 +5,49 @@ Sphinxのインストール
 事前準備
 ========
 * python
-* pip
+* (pip)
 * (virtualenv)
 
 
 インストール
 =============
-terminalやコマンドプロンプトを起動します。::
+terminalやコマンドプロンプトを起動します。
 
-    $ virtualenv env
-    $ source env/bin/activate
+.. code-block:: bash
+
     $ pip install sphinx
 
 
 sphinx-quickstart というコマンドが使えるようになっていればインストール完了です。
 
+グローバル環境にインストールするのが嫌な人は、
 
-sphinx-quickstart
+.. code-block:: bash
+
+    virtualenv env
+    source env/bin/activate
+
+
+とするか、virtualenvwrapperを使ったりしてください。
+
+
+うまくいかない時用
+===================
+* `Windowsへのインストール <http://sphinx-users.jp/gettingstarted/install_windows.html>`_
+* `Windowsへのインストール(スタンドアロンインストール)  <http://sphinx-users.jp/gettingstarted/install_windows_standalone.html>`_
+* `Mac OS X, Linuxへのインストール  <http://sphinx-users.jp/gettingstarted/install_unix.html>`_
+
+
+Sphinxの動作確認
 =================
-sphinxのプロジェクトを作成するには、sphinx-quickstartを利用すると便利です。::
+Sphinxがインストールできたか確認するために、sphinx-quickstartコマンドを使ってみます。
 
-    $ sphinx-quickstart sample1
+.. code-block:: bash
 
+    sphinx-quickstart documentname
+
+
+コマンドを実行すると、対話型でドキュメントの設定を聞かれます。
 
 Project name、Author name(s)、Project versionは入力が必須のため、何かしら入力してください。
 それ以外は何も入力せずにEnterで問題ありません。
@@ -34,7 +55,8 @@ Project name、Author name(s)、Project versionは入力が必須のため、何
 
 .. code-block:: bash
 
-    [env] 02 $  sphinx-quickstart sample1
+    sphinx-quickstart sample1
+
     Welcome to the Sphinx 1.2 quickstart utility.
 
     Please enter values for the following settings (just press Enter to
@@ -107,26 +129,30 @@ Project name、Author name(s)、Project versionは入力が必須のため、何
     where "builder" is one of the supported builders, e.g. html, latex or linkcheck.
 
 
+これでSphinxのプロジェクトが出来ました。
+
 プロジェクトができたら、htmlをビルドしてみましょう。
 
 .. code-block:: bash
 
-    $ cd sample1
-    $ make html
-    $ open _build/html/index.html
+    cd sample1
+    make html
+    open _build/html/index.html
 
 
-_buildというディレクトリが作成され、html/index.htmlが生成されます。
+_buildというディレクトリが作成され、_build/html/index.htmlが生成されます。
+
+ファイルを開いて確認してみてください。
 
 同様に、epubもビルドしてみます。
 
 .. code-block:: bash
 
-    $ make epub
-    $ open _build/epub/Sample1.epub
+    make epub
+    open _build/epub/Sample1.epub
 
 
-特に中身はありませんが、epubも生成できました。
+中身はありませんが、epubも生成できました。
 
 これで準備ができました。
 
