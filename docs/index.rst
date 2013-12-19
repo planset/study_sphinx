@@ -20,16 +20,8 @@ sphinx handson
     05
     06
     07
+    08
 
-
-エディタ
---------
-* なんでも良いですが、reStructuredTextのシンタックスハイライトを使えるエディタがよいです。
-
-
-markdownを使いたい人には
-==========================
-`Pythonプロダクトを活用した開発チーム運営 in PyCon APAC 2013 <http://www.slideshare.net/iktakahiro/python-in-pycon-apac-2013?from_search=31>`_
 
 Sphinx について
 ================
