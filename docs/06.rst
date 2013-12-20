@@ -50,7 +50,7 @@ flaskのテーマ
 
 その他のテーマ
 --------------
-.. code-block::
+.. code-block:: bash
 
     pip search sphinxjp
 
@@ -105,7 +105,7 @@ conf.pyの設定
 
 以下のように書いて make html するとスライドになります。
 
-.. literalinclude:: ../samples/05/s6/index.rst
+.. literalinclude:: ../samples/06/s6/index.rst
 
 
 RESTful HTTP APIドキュメントを作る
