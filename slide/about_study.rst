@@ -4,6 +4,22 @@
     Sphinxで学ぶドキュメント作成方法
  
 
+.. slide:: 自己紹介
+ 
+    @planset
+
+    * 函館出身。旭川の会社に勤め、札幌在住
+    * 仕事はWindows, VB.NET
+    * 趣味はLinux, Python
+
+
+.. slide:: 今日の目標
+ 
+    * Sphinxについて知ってもらい
+    * Sphinxをインストールして
+    * Sphinxに触ってもらう
+
+
 .. slide:: 今日の内容１
  
     * Sphinxってなに？
@@ -15,8 +31,6 @@
 
     * pythonのインストール
     * Sphinxのインストール
-
-    前回Flaskのとき大変でした
 
 
 .. slide:: 今日の内容３
